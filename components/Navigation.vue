@@ -1,6 +1,6 @@
 <template>
   <nav>
-    <v-navigation-drawer v-model="drawer" absolute temporary right app>
+    <v-navigation-drawer v-model="drawer" :bottom="mini" right app>
       <v-list>
         <v-list-item
           v-for="(item, i) in items"
@@ -18,16 +18,13 @@
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
-    <v-app-bar :clipped-left="clipped" fixed app>
-      <v-row align="center" justify="center" class="flex-nowrap">
-        <v-col cols="6">
+    <v-app-bar :clipped-left="clipped" fixed app min-width="350px">
+      <v-row align="center"  justify="center">
+        <v-col lg="8" md="10" >
           <v-row align="center" justify="space-between">
-            <div
-              style="width: 100%;height100%"
-              class="d-flex flex justify-space-between align-center"
-            >
+            <div class="d-flex flex justify-space-between align-center">
               <v-toolbar-items
-                style="width: 70%; min-width: 200px"
+                style="width: 100%"
                 class="fill-height d-flex align-center"
               >
                 <v-text-field
@@ -45,7 +42,7 @@
                 ></v-text-field>
               </v-toolbar-items>
               <v-btn
-                class="ml-3"
+                class="ml-3 hidden-sm-and-down"
                 width="6rem"
                 elevation="0"
                 rounded
@@ -54,8 +51,10 @@
                 <v-icon left> mdi-camera </v-icon>
                 <span class="font-weight-bold">Sell</span></v-btn
               >
+             
               <v-btn
                 class="ml-3"
+                v-show="!$vuetify.breakpoint.xs"
                 width="6rem"
                 elevation="0"
                 outlined
@@ -98,6 +97,23 @@ export default {
         },
       ],
     }
+  },
+  computed: {
+    mini() {
+      switch (this.$vuetify.breakpoint.name) {
+        case 'xs':
+          return true
+        case 'sm':
+          return true
+        case 'md':
+          return false
+        case 'lg':
+          return false
+        case 'xl':
+          return false
+      }
+      return false
+    },
   },
 }
 </script>

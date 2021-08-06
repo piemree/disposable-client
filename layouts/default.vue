@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <Navigation />
-    <v-main>
+    <v-main style="min-width: 350px">
       <v-container>
         <Nuxt />
       </v-container>

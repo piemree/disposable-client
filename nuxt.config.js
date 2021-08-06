@@ -68,8 +68,9 @@ export default {
           error: colors.deepOrange.accent4,
           success: colors.green.accent3
         }
-      }
-    }
+      },
+    },
+    
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

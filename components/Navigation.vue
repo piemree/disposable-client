@@ -1,6 +1,6 @@
 <template>
   <nav>
-    <v-navigation-drawer v-model="drawer" :bottom="mini" right app>
+    <v-navigation-drawer v-model="drawer" temporary right app>
       <v-list>
         <v-list-item
           v-for="(item, i) in items"

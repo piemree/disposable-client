@@ -1,7 +1,19 @@
 <template>
   <v-row justify="center" align="center">
-    <v-col lg="8" md="10">
-      <div class="fill-height red">test</div>
+    <v-col lg="9" md="12" >
+      <div class="fill-height">
+        <h3
+          class="
+            grey--text
+            text--darken-4
+            font-weight-bold
+            text-center text-subtitle-1
+          "
+        >
+          Buy and sell secondhand and find great deals!
+        </h3>
+        <Categories />
+      </div>
     </v-col>
     <div style="position: absolute; left: 50%; bottom: 0">
       <v-btn
@@ -20,7 +32,9 @@
   </v-row>
 </template>
 <script>
+import Categories from '@/components/body/Categories'
 export default {
+  components: { Categories },
   data: () => ({}),
 }
 </script>

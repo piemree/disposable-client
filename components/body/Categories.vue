@@ -1,6 +1,6 @@
 <template>
-  <v-sheet class="mx-auto my-5">
-    <v-slide-group multiple show-arrows>
+  <v-sheet class="mx-auto my-5 d-flex justify-center">
+    <v-slide-group class="d-flex justify-center" multiple show-arrows>
       <v-slide-item v-for="n in 10" :key="n">
         <div>
           <v-btn

@@ -18,7 +18,7 @@
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
-    <v-app-bar :clipped-left="clipped" fixed app min-width="350px">
+    <v-app-bar :clipped-left="clipped" outlined flat fixed app min-width="350px">
       <v-row align="center"  justify="center">
         <v-col lg="8" md="10" >
           <v-row align="center" justify="space-between">

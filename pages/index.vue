@@ -27,6 +27,16 @@
             <Card />
           </v-col>
         </v-row>
+        <v-row justify="center">
+          <v-btn
+            
+            class="my-5"
+            elevation="0"
+            rounded
+            color="error"
+            >Load more</v-btn
+          >
+        </v-row>
       </div>
     </v-col>
     <div style="position: fixed; left: 50%; bottom: 0">
